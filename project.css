@@ -56,3 +56,13 @@ img{
 .msg-container{
     margin-top: 3rem;
 }
+.emojis.hidden{
+    display: none;
+}
+.emojis.visible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+}
