@@ -56,10 +56,10 @@ img{
 .msg-container{
     margin-top: 3rem;
 }
-.emojis.hidden{
-    display: none;
+.hidden{
+    visibility:hidden ;
 }
-.emojis.visible{
+.emoji{
     display: flex;
     justify-content: center;
     align-items: center;

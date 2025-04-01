@@ -14,23 +14,14 @@ const getCompChoice=()=>{
 }
 const drawGame=()=>{
     console.log("game was draw.");
-    happyimg.classList.add('hidden');
-    sadimg.classList.add('hidden');
     drawimg.classList.remove('hidden');
-    drawimg.classList.add('visible');
-    msg.innerText="game was draw.play again";
-    
-   
+    msg.innerText="game was draw.play again";  
 }
 const showWinner=(userWin,userChoice,CompChoice)=>{
-    drawimg.classList.add('hidden');
-    happyimg.classList.add('hidden');
-    sadimg.classList.add('hidden');
     if (userWin){
         userScore++;
         userScorePara.innerText=userScore;
         happyimg.classList.remove('hidden');
-        happyimg.classList.add('visible');
         console.log("you win!");
         msg.innerText="you win!";
         msg.style.backgroundColor="green";
@@ -38,13 +29,16 @@ const showWinner=(userWin,userChoice,CompChoice)=>{
         compScore++;
         compScorePara.innerText=compScore;
         sadimg.classList.remove('hidden');
-        sadimg.classList.add('visible');
         console.log("you lose");
         msg.innerText="you lose";
         msg.style.backgroundColor="red";
     }
 }
 const playGame=(userChoice)=>{
+    happyimg.classList.add("hidden");
+    sadimg.classList.add("hidden");
+    drawimg.classList.add("hidden");
+
    console.log("userChoice=",userChoice);
    const CompChoice=getCompChoice();//COMPUTER FUNCTION CALL
     console.log("CompChoice=",CompChoice);
